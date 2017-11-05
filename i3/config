@@ -132,6 +132,8 @@ bindsym $sup+Shift+0 move container to workspace 10
 # default window workspace
 for_window [class="Firefox"] move to workspace $ws4
 for_window [class="Thunderbird"] move to workspace $ws5
+#for_window [class="Spotify"] move to workspace $ws9
+#for_window [class="Discord"] move to workspace $ws8
 
 # reload the configuration file
 bindsym $sup+Shift+c reload

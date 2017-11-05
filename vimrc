@@ -17,4 +17,3 @@ map <F6> :setlocal spell! spelllang=en_us<CR>
 
 set relativenumber
 set number
-
