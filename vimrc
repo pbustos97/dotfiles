@@ -15,7 +15,6 @@ map <C-n> :NERDTreeToggle<CR>
 map <C-w> :q<CR>
 map <F6> :setlocal spell! spelllang=en_us<CR>
 
-
 set relativenumber
 set number
 

@@ -13,6 +13,7 @@ font pango:monospace 8
 set $term konsole 
 set $sup Mod4
 set $mod Mod1
+
 # use these keys for focus, movement, and resize directions when reaching for
 # the arrows is not convenient
 set $up l
