@@ -1,5 +1,6 @@
 set nocompatible
 filetype off
+syntax on
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -33,3 +34,10 @@ map <C-p> "+P
 
 set relativenumber
 set number
+set autoindent
+set expandtab
+set shiftwidth=4
+set shiftround
+set tabstop=4
+set history=1000
+
