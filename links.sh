@@ -7,25 +7,24 @@
 #### Variables
 
 dir=~/dotfiles	# dotfiles directory
-olddir=~/dotfiles_old	# old dotfiles backup directory
-files="i3/config vimrc"	# list of files/folders to symlink in homedir
-
+i3dir=~/dotfiles/i3 #i3 directory
+files="/.config/i3/config /.i3/i3blocks.conf"	# list of files/folders to symlink in homedir
 ####
-
-# create dotfiles_old in homedir
-echo "Creating $olddir for backup of any existing files in ~"
-mkdir -p $olddir
-echo "...done"
 
 # change to the dotfiles directory
 echo "Changing to the $dir directory"
 cd $dir
 echo "...done"
 
-# move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks
+# copy config files into folder
 for file in $files; do
-	echo "Moving any existing dotfiles from ~ to $olddir"
-	mv ~/.$file ~/dotfiles_old/
-	echo "Creating symlink to $file in home directory."
-	ln -s $dir/$file ~/.$file
+	echo "Copying any existing i3 files from ~ to $i3dir"
+	cp ~/.$file ~/dotfiles/i3/
 done
+echo "Copying vimrc to $dir"
+cp ~/.vimrc ~/dotfiles/vimrc
+echo "Copying .Xdefaults to $dir"
+cp ~/.Xdefaults ~/dotfiles/Xdefaults
+echo "Copying ranger settings to $dir"
+cp ~/.config/ranger/rc.conf ~/dotfiles/rc.conf
+
