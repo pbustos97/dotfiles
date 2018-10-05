@@ -201,6 +201,14 @@ bar {
 }
 
 #######################################################################
+# misc buttons
+# screen brightness
+#######################################################################
+bindsym XF86MonBrightnessUp exec xbacklight -inc 20
+bindsym XF86MonBrightnessDown exec xbacklight -dec 20
+
+
+#######################################################################
 # automatically start i3-config-wizard to offer the user to create a
 # keysym-based config which used their favorite modifier (alt or windows)
 #
@@ -210,6 +218,7 @@ bar {
 # Please remove the following exec line:
 #######################################################################
 exec i3-config-wizard
+exec xinput set-prop 13 280 1
 exec_always --no-startup-id nm-applet
 exec --no-startup-id volumeicon
 exec_always compton -f
