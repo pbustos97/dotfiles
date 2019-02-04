@@ -40,6 +40,9 @@ nnoremap gc :!git commit<CR>
 nnoremap gpl :!git pull<CR>
 nnoremap gps :!git push<CR>
 
+"insert remaps
+inoremap jk <Esc>
+
 set relativenumber
 set number
 set autoindent
