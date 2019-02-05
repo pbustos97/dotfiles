@@ -20,8 +20,9 @@ nnoremap tj :tabprev<CR>
 nnoremap th :tabfirst<CR>
 nnoremap tl :tablast<CR>
 
-map <C-w> :q<CR>
-map <C-s> :w<CR>
+"quit, write, and spell check
+map <C-x> :q<CR>
+map <C-w> :w<CR>
 map <F6> :setlocal spell! spelllang=en_us<CR>
 
 "nerdtree window commands
