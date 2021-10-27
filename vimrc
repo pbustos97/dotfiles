@@ -14,9 +14,14 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'yggdroot/indentline'
 Plugin 'scrooloose/syntastic'
+Plugin 'xuhdev/vim-latex-live-preview'
 
 call vundle#end()
 filetype plugin indent on
+
+"vim-latex-live-preview options
+let g:livepreview_previewer = 'open -a Preview'
+nnoremap ct :LLPStartPreview<CR>
 
 "vim-airline extensions
 let g:airline#extensions#tabline#enabled = 1
@@ -52,7 +57,7 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-"copy and paste 
+"copy and paste
 vnoremap <C-c> "*y :let @+=@*<CR>
 map <C-p> "+P
 
