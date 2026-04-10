@@ -2,7 +2,7 @@
 set -e
 
 DOTFILES_DIR="$(cd "$(dirname "$0")" && pwd)"
-CONFIG_DIR="$DOTFILES_DIR/config"
+CONFIG_DIR="$DOTFILES_DIR/.config"
 
 mkdir -p "$CONFIG_DIR"
 
@@ -10,8 +10,9 @@ copy_if_exists() {
     local src="$1"
     local dest="$2"
     if [ -e "$src" ]; then
+        rm -rf "$dest"
         mkdir -p "$(dirname "$dest")"
-        cp -r "$src" "$dest"
+        cp -rf "$src" "$dest"
         echo "Copied: $src -> $dest"
     else
         echo "Skipped (not found): $src"

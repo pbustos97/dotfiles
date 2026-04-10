@@ -2,7 +2,7 @@
 set -e
 
 DOTFILES_DIR="$(cd "$(dirname "$0")" && pwd)"
-CONFIG_DIR="$DOTFILES_DIR/config"
+CONFIG_DIR="$DOTFILES_DIR/.config"
 
 restore_if_exists() {
     local src="$1"
