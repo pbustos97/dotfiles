@@ -3,3 +3,4 @@
 
 # Ignore yazi plugins folder
 .config/yazi/plugins
+.config/yazi/package.toml
