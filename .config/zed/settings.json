@@ -1,0 +1,111 @@
+{
+  "wsl_connections": [
+    {
+      "distro_name": "Ubuntu-20.04",
+      "user": null,
+      "projects": []
+    }
+  ],
+  "language_models": {
+    "openai_compatible": {}
+  },
+  "agent_servers": {},
+  "edit_prediction": {
+      "ollama": {
+          "prompt_format": "infer",
+          "model": "gemma4:26b"
+      },
+      "provider": "ollama"
+  },
+  "agent": {
+    "message_editor_min_lines": 4,
+    "profiles": {},
+    "notify_when_agent_waiting": "never",
+    "tool_permissions": {
+      "default": "confirm",
+      "tools": {
+        "search_web": {
+          "default": "allow"
+        },
+        "restore_file_from_disk": {
+          "default": "confirm"
+        },
+        "fetch": {
+          "default": "confirm"
+        },
+        "terminal": {
+          "default": "confirm"
+        },
+        "edit_file": {
+          "default": "confirm"
+        },
+        "delete_path": {
+          "default": "confirm"
+        },
+        "copy_path": {
+          "default": "confirm"
+        },
+        "move_path": {
+          "default": "confirm"
+        },
+        "create_directory": {
+          "default": "confirm"
+        },
+        "save_file": {
+          "default": "confirm"
+        }
+      }
+    }
+  },
+  "vim_mode": true,
+  "title_bar": {
+    "show_sign_in": false
+  },
+  "cursor_shape": "block",
+  "toolbar": {
+    "code_actions": true
+  },
+  "minimap": {
+    "show": "always"
+  },
+  "scrollbar": {
+    "show": "always"
+  },
+  "tabs": {
+    "git_status": true
+  },
+  "collaboration_panel": {
+    "button": false
+  },
+  "terminal": {
+    "scrollbar": {
+      "show": "auto"
+    },
+    "shell": {
+      "program": "fish"
+    }
+  },
+  "calls": {
+    "mute_on_join": true
+  },
+  "disable_ai": false,
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "session:": {
+    "trust_all_worktrees": false
+  },
+  "show_whitespaces": "all",
+  "show_edit_predictions": true,
+  "soft_wrap": "editor_width",
+  "icon_theme": "Zed (Default)",
+  "base_keymap": "VSCode",
+  "ui_font_size": 16,
+  "buffer_font_size": 15,
+  "theme": {
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "One Dark"
+  }
+}

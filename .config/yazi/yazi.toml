@@ -1,0 +1,21 @@
+[mgr]
+show_hidden = true
+sort_dir_first = true
+show_symlink = true
+mouse_events = ["scroll", "touch", "click"]
+
+[opener]
+edit = [
+    {run="vim %s", orphan=false, block=true,for="unix"}
+]
+
+open_dir = [
+    {run="zed %s", orphan=true, block=false, for="unix"}
+]
+
+[open]
+rules = [
+    {mime="folder/*", use="open_dir"},
+    {mime="text/*", use="edit"}
+]
+
