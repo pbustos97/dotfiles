@@ -1,0 +1,47 @@
+- name: Install personal tools
+  hosts: localhost
+
+  tasks:
+    - name: Install vim and nvim
+      ansible.builtin.package:
+        name:
+          - vim
+          - neovim
+        state: present
+      become: true
+
+    - name: Install ghostty
+      ansible.builtin.package:
+        name: "ghostty"
+        state: "present"
+      become: true
+
+    - name: Yazi installation
+      block:
+        - name: Install yazi
+          ansible.builtin.package:
+            name:
+              - yazi
+            state: "present"
+          become: true
+    
+        - name: Install yazi config dependencies
+          ansible.builtin.package:
+            name:
+              - glow
+            state: "present"
+          become: true
+
+        - name: Yazi plugins
+          block:
+            - name: Install yazi plugins
+              ansible.builtin.shell:
+                cmd: ./install_scripts/install_yazi_plugins.sh
+
+    - name: Install zed
+      ansible.builtin.shell:
+        cmd: ./install_scripts/install_zed.sh
+
+    - name: Install opencode
+      ansible.builtin.shell:
+        cmd: ./install_scripts/install_opencode.sh

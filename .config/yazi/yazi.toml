@@ -19,3 +19,10 @@ rules = [
     {mime="text/*", use="edit"}
 ]
 
+[plugin]
+
+[[plugin.prepend_previewers]]
+
+# Markdown Preview
+url = "*.md"
+run = 'piper -- CLICOLOR_FORCE=1 glow -w=$w -s=dark "$1"'
