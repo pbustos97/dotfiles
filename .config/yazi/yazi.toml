@@ -4,6 +4,9 @@ sort_dir_first = true
 show_symlink = true
 mouse_events = ["scroll", "touch", "click"]
 
+[manager]
+linemode="git"
+
 [opener]
 edit = [
     {run="vim %s", orphan=false, block=true,for="unix"}
@@ -20,6 +23,16 @@ rules = [
 ]
 
 [plugin]
+
+[[plugin.prepend_fetchers]]
+id="git"
+url="*"
+run="git"
+
+[[plugin.prepend_fetchers]]
+id="git"
+url="/*"
+run="git"
 
 [[plugin.prepend_previewers]]
 
