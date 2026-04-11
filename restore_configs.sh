@@ -20,7 +20,7 @@ restore_if_exists() {
 
 restore_if_exists "$CONFIG_DIR/zed" "$HOME_CONFIG_DIR/zed"
 restore_if_exists "$DOTFILES_DIR/.vimrc" "$HOME/.vimrc"
-restore_if_exists "$CONFIG_DIR/nvim" "$HOME_CONFIG_DIR/.config/nvim"
-restore_if_exists "$CONFIG_DIR/niri" "$HOME_CONFIG_DIR/.config/niri"
+restore_if_exists "$CONFIG_DIR/nvim" "$HOME_CONFIG_DIR/nvim"
+restore_if_exists "$CONFIG_DIR/niri" "$HOME_CONFIG_DIR/niri"
 restore_if_exists "$CONFIG_DIR/ghostty" "$HOME_CONFIG_DIR/ghostty"
 restore_if_exists "$CONFIG_DIR/yazi" "$HOME_CONFIG_DIR/yazi"
