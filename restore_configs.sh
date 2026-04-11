@@ -3,6 +3,7 @@ set -e
 
 DOTFILES_DIR="$(cd "$(dirname "$0")" && pwd)"
 CONFIG_DIR="$DOTFILES_DIR/.config"
+HOME_CONFIG_DIR="$HOME/.config"
 
 restore_if_exists() {
     local src="$1"
@@ -17,9 +18,9 @@ restore_if_exists() {
     fi
 }
 
-restore_if_exists "$CONFIG_DIR/zed" "$HOME/.config/zed"
+restore_if_exists "$CONFIG_DIR/zed" "$HOME_CONFIG_DIR/zed"
 restore_if_exists "$DOTFILES_DIR/.vimrc" "$HOME/.vimrc"
-restore_if_exists "$CONFIG_DIR/nvim" "$HOME/.config/nvim"
-restore_if_exists "$CONFIG_DIR/niri" "$HOME/.config/niri"
-restore_if_exists "$CONFIG_DIR/ghostty" "$HOME/.config/ghostty"
-restore_if_exists "$CONFIG_DIR/yazi" "$HOME/.config/yazi"
+restore_if_exists "$CONFIG_DIR/nvim" "$HOME_CONFIG_DIR/.config/nvim"
+restore_if_exists "$CONFIG_DIR/niri" "$HOME_CONFIG_DIR/.config/niri"
+restore_if_exists "$CONFIG_DIR/ghostty" "$HOME_CONFIG_DIR/ghostty"
+restore_if_exists "$CONFIG_DIR/yazi" "$HOME_CONFIG_DIR/yazi"

@@ -3,6 +3,7 @@ set -e
 
 DOTFILES_DIR="$(cd "$(dirname "$0")" && pwd)"
 CONFIG_DIR="$DOTFILES_DIR/.config"
+HOME_CONFIG_DIR="$HOME/.config"
 
 mkdir -p "$CONFIG_DIR"
 
@@ -19,9 +20,9 @@ copy_if_exists() {
     fi
 }
 
-copy_if_exists "$HOME/.config/zed" "$CONFIG_DIR/zed"
+copy_if_exists "$HOME_CONFIG_DIR/zed" "$CONFIG_DIR/zed"
 copy_if_exists "$HOME/.vimrc" "$DOTFILES_DIR/.vimrc"
-copy_if_exists "$HOME/.config/nvim" "$CONFIG_DIR/nvim"
-copy_if_exists "$HOME/.config/niri" "$CONFIG_DIR/niri"
-copy_if_exists "$HOME/.config/ghostty" "$CONFIG_DIR/ghostty"
-copy_if_exists "$HOME/.config/yazi" "$CONFIG_DIR/yazi"
+copy_if_exists "$HOME_CONFIG_DIR/nvim" "$CONFIG_DIR/nvim"
+copy_if_exists "$HOME_CONFIG_DIR/niri" "$CONFIG_DIR/niri"
+copy_if_exists "$HOME_CONFIG_DIR/ghostty" "$CONFIG_DIR/ghostty"
+copy_if_exists "$HOME_CONFIG_DIR/yazi" "$CONFIG_DIR/yazi"
