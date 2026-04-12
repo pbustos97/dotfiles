@@ -1,0 +1,7 @@
+- name: Install zed
+  ansible.builtin.shell:
+    cmd: ./install_scripts/install_zed.sh
+
+- name: Install opencode
+  ansible.builtin.shell:
+    cmd: ./install_scripts/install_opencode.sh

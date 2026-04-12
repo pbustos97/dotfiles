@@ -1,0 +1,23 @@
+- name: Install rust
+  block:
+    - name: Download rust install script
+      ansible.builtin.get_url: 
+        url: https://sh.rustup.rs
+        dest: /tmp/rustup.sh
+        mode: "0755"
+    
+    - name: Install rust
+      ansible.builtin.shell:
+        cmd: /tmp/rustup.sh -y
+        creates: ~/.cargo/bin/rustc
+    
+    - name: Delete the rust install script
+      ansible.builtin.shell:
+        cmd: rm /tmp/rustup.sh
+
+- name: Install zig
+  ansible.builtin.package:
+    name:
+      - zig
+    state: "present"
+  become: true

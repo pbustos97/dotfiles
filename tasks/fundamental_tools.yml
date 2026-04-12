@@ -1,0 +1,31 @@
+- name: Install vim and nvim
+  ansible.builtin.package:
+    name:
+      - vim
+      - neovim
+    state: present
+  become: true
+
+- name: Install ghostty
+  ansible.builtin.package:
+    name: "ghostty"
+    state: "present"
+  become: true
+
+- name: Install yazi
+  ansible.builtin.package:
+    name:
+      - yazi
+    state: "present"
+  become: true
+
+- name: Install yazi config dependencies
+  ansible.builtin.package:
+    name:
+      - glow
+    state: "present"
+  become: true
+
+- name: Install yazi plugins
+  ansible.builtin.shell:
+    cmd: ./install_scripts/install_yazi_plugins.sh
