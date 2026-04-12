@@ -7,14 +7,14 @@ Should be distro independant
 
 - Installs Ansible and required dependencies via base package manager
 - Sync non-sensitive dotfile configs
-- Automate personal tool installation via Ansible playbook (should really be bash scripts)
+- Automate personal tool installation via Ansible playbook
 
 ## Usage
 
-Run the ansible install script:
+Run the install script for all the tools:
 
 ```bash
-./install_ansible.sh
+./install_tools.sh
 ```
 
 Sync settings:
