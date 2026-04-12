@@ -17,6 +17,11 @@ install_yazi_plugin() {
     local plugin_name="$1"
     local repo="${2:-yazi-rs/plugins}"
 
-    ya pkg delete "$repo":"$plugin_name"
-    ya pkg add "$repo":"$plugin_name"
+    if [[ "$repo" == "yazi-rs/plugins" ]]; then
+        ya pkg delete "$repo:$plugin_name"
+        ya pkg add "$repo:$plugin_name"
+    else
+        ya pkg delete "$repo/$plugin_name"
+        ya pkg add "$repo/$plugin_name"
+    fi
 }
