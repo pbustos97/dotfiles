@@ -2,6 +2,8 @@
   hosts: localhost
 
   tasks:
+
+# Fundamental tools
     - name: Install vim and nvim
       ansible.builtin.package:
         name:
@@ -38,6 +40,7 @@
               ansible.builtin.shell:
                 cmd: ./install_scripts/install_yazi_plugins.sh
 
+# Dev tools
     - name: Install zed
       ansible.builtin.shell:
         cmd: ./install_scripts/install_zed.sh
@@ -45,3 +48,26 @@
     - name: Install opencode
       ansible.builtin.shell:
         cmd: ./install_scripts/install_opencode.sh
+
+# Languages
+    - name: Install rust
+      block:
+        - name: Download rust install script
+          ansible.builtin.get_url: 
+            url: https://sh.rustup.rs
+            dest: /tmp/rustup.sh
+            mode: "0755"
+        - name: Install rust
+          ansible.builtin.shell:
+            cmd: /tmp/rustup.sh -y
+            creates: ~/.cargo/bin/rustc
+        - name: Delete the install script
+          ansible.builtin.shell:
+            cmd: rm /tmp/rustup.sh
+
+    - name: Install zig
+      ansible.builtin.package:
+        name:
+          - zig
+        state: "present"
+      become: true
