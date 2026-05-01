@@ -1,0 +1,21 @@
+- name: Install Discord
+  ansible.builtin.package:
+    name:
+      - discord-canary
+      - vesktop
+    state: present
+  become: true
+
+- name: Install PDF signer/reader
+  ansible.builtin.package:
+    name:
+      - stirling-pdf-desktop
+    state: present
+  become: true
+
+- name: Install Screen Recorder
+  anisble.builtin.package:
+    name:
+      - obs-studio-browser
+    state: present
+  become: true

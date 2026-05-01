@@ -26,3 +26,5 @@ copy_if_exists "$HOME_CONFIG_DIR/nvim" "$CONFIG_DIR/nvim"
 copy_if_exists "$HOME_CONFIG_DIR/niri" "$CONFIG_DIR/niri"
 copy_if_exists "$HOME_CONFIG_DIR/ghostty" "$CONFIG_DIR/ghostty"
 copy_if_exists "$HOME_CONFIG_DIR/yazi" "$CONFIG_DIR/yazi"
+copy_if_exists "$HOME_CONFIG_DIR/xdg-desktop-portal" "$CONFIG_DIR/xdg-desktop-portal"
+

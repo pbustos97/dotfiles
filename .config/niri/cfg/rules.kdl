@@ -65,6 +65,7 @@ workspace "stream-preview" {
     // Chat stuff
     window-rule {
         match app-id="discord"
+        match app-id="vesktop"
         match app-id="Spotify"
 
         open-floating false

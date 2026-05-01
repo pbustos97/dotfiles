@@ -16,10 +16,15 @@ open_dir = [
     {run="zed %s", orphan=true, block=false, for="unix"}
 ]
 
+open_vid = [
+    {run="vlc %s", orphan=true, block=false, for="unix"}
+]
+
 [open]
 rules = [
     {mime="folder/*", use="open_dir"},
-    {mime="text/*", use="edit"}
+    {mime="text/*", use="edit"},
+    {mime="video/*", use="open_vid"}
 ]
 
 [plugin]

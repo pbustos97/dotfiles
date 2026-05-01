@@ -24,3 +24,5 @@ restore_if_exists "$CONFIG_DIR/nvim" "$HOME_CONFIG_DIR/nvim"
 restore_if_exists "$CONFIG_DIR/niri" "$HOME_CONFIG_DIR/niri"
 restore_if_exists "$CONFIG_DIR/ghostty" "$HOME_CONFIG_DIR/ghostty"
 restore_if_exists "$CONFIG_DIR/yazi" "$HOME_CONFIG_DIR/yazi"
+restore_if_exists "$CONFIG_DIR/xdg-desktop-portal" "$HOME_CONFIG_DIR/xdg-desktop-portal"
+
