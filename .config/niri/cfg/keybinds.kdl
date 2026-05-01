@@ -69,6 +69,8 @@ binds {
     Mod+Shift+CTRL+Down                 { move-column-to-monitor-down; }
 
     // ─── Workspace Switching ───
+    Mod+ALT+J                           cooldown-ms=50 { focus-workspace-down; }
+    Mod+ALT+K                           cooldown-ms=50 { focus-workspace-up; }
     Mod+WheelScrollDown                 cooldown-ms=150 { focus-workspace-down; }
     Mod+WheelScrollUp                   cooldown-ms=150 { focus-workspace-up; }
     Mod+CTRL+WheelScrollDown            cooldown-ms=150 { move-column-to-workspace-down; }

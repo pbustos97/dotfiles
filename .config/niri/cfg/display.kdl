@@ -3,7 +3,22 @@
 // You will have to remove "/-" and edit it before it takes effect.
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Outputs
 
-/- output "DP-1" {
-    mode "2560x1440@359.979" // Set resolution and refresh rate
-    scale 1 // No scaling (use 2 for HiDPI)
+// Home PC Layout
+
+// LG UltraGear
+output "DP-2" {
+    position x=0 y=0
+    mode "2560x1440@239.970"
+    variable-refresh-rate on-demand=true
+}
+// Nixeus 144hz
+output "DP-3" {
+    position x=2560 y=0
+    mode "2560x1440@144.078"
+    variable-refresh-rate on-demand=true
+}
+// Capture Card
+output "HDMI-A-1" {
+    position x=5120 y=0
+    mode "2560x1440@59.951"
 }

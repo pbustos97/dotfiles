@@ -1,22 +1,108 @@
+workspace "chat" {
+    open-on-output "DP-3"
+}
+
+workspace "launchers" {
+    open-on-output "DP-3"
+}
+
+workspace "games" {
+    open-on-output "DP-2"
+}
+
+workspace "browsers" {
+    open-on-output "DP-2"
+}
+
+workspace "work" {
+    open-on-output "DP-2"
+}
+
+workspace "streaming" {
+    open-on-output "DP-3"
+}
+workspace "stream-preview" {
+    open-on-output "HDMI-A-1"
+}
+
     window-rule {
         geometry-corner-radius 10 // Set every window radius to 20
         clip-to-geometry true
     }
 
-     // if you use steam you will probably like these
+    window-rule {
+        match app-id="firefox"
+
+        open-on-workspace "browsers"
+        open-maximized true
+    }
+
+    window-rule {
+        match app-id="dev.zed.Zed"
+
+        open-on-workspace "work"
+    }
+    // if you use steam you will probably like these
     window-rule {
         match app-id="steam"
-        exclude title=r#"^[Ss]team$"#
-        open-floating true
+
+        open-on-workspace "launchers"
+        open-maximized true
+
+        variable-refresh-rate false
     }
 
     window-rule {
        match app-id="steam" title=r#"^notificationtoasts_\d+_desktop$"#
        default-floating-position x=10 y=10 relative-to="bottom-right"
+       
+       open-on-workspace "launchers"
        open-focused false
+
+       variable-refresh-rate false
+    }
+
+    // Chat stuff
+    window-rule {
+        match app-id="discord"
+        match app-id="Spotify"
+
+        open-floating false
+        open-on-workspace "chat"
+        variable-refresh-rate false
     }
 
     layer-rule {
         match namespace="^noctalia-wallpaper*"
         place-within-backdrop true
+    }
+
+    // Games & streaming
+    window-rule {
+        match app-id="cs2"
+        match app-id=".*steam_app_.*"
+
+        open-on-workspace "games"
+        open-floating false
+        open-maximized true
+        open-focused true
+
+        variable-refresh-rate true
+    }
+
+    window-rule {
+        match app-id="com.obsproject.Studio"
+
+        open-on-workspace "streaming"
+        open-maximized true
+        open-focused true
+    }
+
+    window-rule {
+        match app-id="com.obsproject.Studio" title=r#".*Projector.*"#
+
+        open-on-workspace "stream-preview"
+        open-fullscreen true
+        open-focused true
+
     }
