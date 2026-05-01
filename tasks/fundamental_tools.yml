@@ -29,3 +29,10 @@
 - name: Install yazi plugins
   ansible.builtin.shell:
     cmd: ./install_scripts/install_yazi_plugins.sh
+
+- name: Install 7zip
+  ansible.builtin.package:
+    name:
+      - 7zip
+    state: present
+  become: true

@@ -32,6 +32,7 @@ workspace "stream-preview" {
 
     window-rule {
         match app-id="firefox"
+        match app-id="brave-browser"
 
         open-on-workspace "browsers"
         open-maximized true

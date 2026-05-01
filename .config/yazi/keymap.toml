@@ -1,0 +1,5 @@
+[[mgr.prepend_keymap]]
+on = [ "g", "r" ]
+run = "cd /replays/shadowplay"
+desc = "Cd to shadowplay replays"
+

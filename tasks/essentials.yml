@@ -1,8 +1,16 @@
-- name: Install Discord
+- name: Install Browsers
+  ansible.builtin.package:
+    name:
+      - brave-bin
+      - firefox
+    state: present
+  become:true
+
+- name: Install Discord and Spotify
   ansible.builtin.package:
     name:
       - discord-canary
-      - vesktop
+      - spotify-launcher
     state: present
   become: true
 
@@ -17,5 +25,21 @@
   anisble.builtin.package:
     name:
       - obs-studio-browser
+      - gpu-screen-recorder-ui
+    state: present
+  become: true
+
+- name: Install Media Viewers
+  ansible.builtin.package:
+    name:
+      - qimgv-git
+      - fooyin
+    state: present
+  become: true
+
+- name: Install VPN Tools
+  ansible.builtin.package:
+    name:
+      - wireguard-tools
     state: present
   become: true
