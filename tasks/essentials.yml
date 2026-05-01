@@ -22,7 +22,7 @@
   become: true
 
 - name: Install Screen Recorder
-  anisble.builtin.package:
+  ansible.builtin.package:
     name:
       - obs-studio-browser
       - gpu-screen-recorder-ui

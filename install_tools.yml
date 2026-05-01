@@ -16,5 +16,5 @@
         file: tasks/languages.yml
 
     - name: Essential Apps
-      anisble.builtin.include_tasks:
+      ansible.builtin.include_tasks:
         file: tasks/essentials.yml

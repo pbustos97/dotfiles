@@ -1,6 +1,8 @@
 #!/bin/bash
 set -e
 
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+CONFIG_FILE="$SCRIPT_DIR/directories.json"
 DOTFILES_DIR="$(cd "$(dirname "$0")" && pwd)"
 CONFIG_DIR="$DOTFILES_DIR/.config"
 HOME_CONFIG_DIR="$HOME/.config"
@@ -20,11 +22,8 @@ copy_if_exists() {
     fi
 }
 
-copy_if_exists "$HOME_CONFIG_DIR/zed" "$CONFIG_DIR/zed"
-copy_if_exists "$HOME/.vimrc" "$DOTFILES_DIR/.vimrc"
-copy_if_exists "$HOME_CONFIG_DIR/nvim" "$CONFIG_DIR/nvim"
-copy_if_exists "$HOME_CONFIG_DIR/niri" "$CONFIG_DIR/niri"
-copy_if_exists "$HOME_CONFIG_DIR/ghostty" "$CONFIG_DIR/ghostty"
-copy_if_exists "$HOME_CONFIG_DIR/yazi" "$CONFIG_DIR/yazi"
-copy_if_exists "$HOME_CONFIG_DIR/xdg-desktop-portal" "$CONFIG_DIR/xdg-desktop-portal"
-
+while IFS= read -r entry; do
+    source="$(echo "$entry" | jq -r '.source')"
+    dest_dotfiles="$(echo "$entry" | jq -r '.dotfiles')"
+    copy_if_exists "$HOME/$source" "$DOTFILES_DIR/$dest_dotfiles"
+done < <(jq -c '.directories[]' "$CONFIG_FILE")

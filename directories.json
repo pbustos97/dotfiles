@@ -1,0 +1,39 @@
+{
+  "directories": [
+    {
+      "name": "zed",
+      "source": ".config/zed",
+      "dotfiles": ".config/zed"
+    },
+    {
+      "name": "vimrc",
+      "source": ".vimrc",
+      "dotfiles": ".vimrc"
+    },
+    {
+      "name": "nvim",
+      "source": ".config/nvim",
+      "dotfiles": ".config/nvim"
+    },
+    {
+      "name": "niri",
+      "source": ".config/niri",
+      "dotfiles": ".config/niri"
+    },
+    {
+      "name": "ghostty",
+      "source": ".config/ghostty",
+      "dotfiles": ".config/ghostty"
+    },
+    {
+      "name": "yazi",
+      "source": ".config/yazi",
+      "dotfiles": ".config/yazi"
+    },
+    {
+      "name": "xdg-desktop-portal",
+      "source": ".config/xdg-desktop-portal",
+      "dotfiles": ".config/xdg-desktop-portal"
+    }
+  ]
+}
