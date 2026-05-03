@@ -1,3 +1,4 @@
+// Second Monitor
 workspace "chat" {
     open-on-output "DP-3"
 }
@@ -6,10 +7,7 @@ workspace "launchers" {
     open-on-output "DP-3"
 }
 
-workspace "games" {
-    open-on-output "DP-2"
-}
-
+// First Monitor
 workspace "browsers" {
     open-on-output "DP-2"
 }
@@ -18,6 +16,11 @@ workspace "work" {
     open-on-output "DP-2"
 }
 
+workspace "games" {
+    open-on-output "DP-2"
+}
+
+// Streaming stuff
 workspace "streaming" {
     open-on-output "DP-3"
 }
@@ -43,9 +46,13 @@ workspace "stream-preview" {
 
         open-on-workspace "work"
     }
+
     // if you use steam you will probably like these
     window-rule {
         match app-id="steam"
+        match app-id="heroic"
+        match app-id="steam_app_default" title="EA"
+        match app-id="net.lutris.Lutris"
 
         open-on-workspace "launchers"
         open-maximized true
@@ -74,18 +81,31 @@ workspace "stream-preview" {
         variable-refresh-rate false
     }
 
+    // Layer rules
     layer-rule {
         match namespace="^noctalia-wallpaper*"
         place-within-backdrop true
+    }
+
+    // Hide from streams and captures
+    window-rule {
+        match app-id="brave-browser"
+        match app-id="discord"
+        match app-id="vesktop"
+        match app-id="Spotify"
+        match app-id="firefox"
+
+        block-out-from "screencast"
     }
 
     // Games & streaming
     window-rule {
         match app-id="cs2"
         match app-id=".*steam_app_.*"
+        match app-id=".*.exe"
 
         open-on-workspace "games"
-        open-floating false
+        open-floating true
         open-maximized true
         open-focused true
 

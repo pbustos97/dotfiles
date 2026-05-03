@@ -21,11 +21,12 @@
     state: present
   become: true
 
-- name: Install Screen Recorder
+- name: Install Screen Recorder and stream tools
   ansible.builtin.package:
     name:
       - obs-studio-browser
       - gpu-screen-recorder-ui
+      - ffmpeg
     state: present
   become: true
 
