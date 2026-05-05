@@ -27,6 +27,8 @@
       - obs-studio-browser
       - gpu-screen-recorder-ui
       - ffmpeg
+      - mangohud-git
+      - lib32-mangohud-git
     state: present
   become: true
 

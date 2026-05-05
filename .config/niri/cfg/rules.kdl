@@ -106,7 +106,7 @@ workspace "stream-preview" {
 
         open-on-workspace "games"
         open-floating true
-        open-maximized true
+        open-fullscreen true
         open-focused true
 
         variable-refresh-rate true

@@ -34,6 +34,11 @@
       "name": "xdg-desktop-portal",
       "source": ".config/xdg-desktop-portal",
       "dotfiles": ".config/xdg-desktop-portal"
+    },
+    {
+      "name": "MangoHud",
+      "source": ".config/MangoHud",
+      "dotfiles": ".config/MangoHud"
     }
   ]
 }
