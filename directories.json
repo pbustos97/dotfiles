@@ -39,6 +39,26 @@
       "name": "MangoHud",
       "source": ".config/MangoHud",
       "dotfiles": ".config/MangoHud"
+    },
+    {
+        "name": "autostart",
+        "source": ".config/autostart",
+        "dotfiles": ".config/autostart"
+    },
+    {
+        "name": "fish",
+        "source": ".config/fish/config.fish",
+        "dotfiles": ".config/fish/config.fish"
+    },
+    {
+        "name": "bashrc",
+        "source": ".bashrc",
+        "dotfiles": ".bashrc"
+    },
+    {
+        "name": "zshrc",
+        "source": ".zshrc",
+        "dotfiles": ".zshrc"
     }
   ]
 }

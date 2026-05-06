@@ -52,6 +52,7 @@ workspace "stream-preview" {
         match app-id="steam"
         match app-id="heroic"
         match app-id="steam_app_default" title="EA"
+        match app-id="steam_app_default" title="Ubisoft Connect"
         match app-id="net.lutris.Lutris"
 
         open-on-workspace "launchers"
@@ -103,6 +104,9 @@ workspace "stream-preview" {
         match app-id="cs2"
         match app-id=".*steam_app_.*"
         match app-id=".*.exe"
+
+        exclude title="EA"
+        exclude title="Ubisoft Connect"
 
         open-on-workspace "games"
         open-floating true

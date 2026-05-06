@@ -1,0 +1,5 @@
+[Desktop Entry]
+Type=Application
+Exec=/home/daniel/.virtual_audio_routing.sh
+Hidden=false
+X-KDE-AutostartScript=true

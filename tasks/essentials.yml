@@ -29,6 +29,7 @@
       - ffmpeg
       - mangohud-git
       - lib32-mangohud-git
+      - kdotool-bin
     state: present
   become: true
 
