@@ -1,7 +1,7 @@
 - name: Install Browsers
   ansible.builtin.package:
     name:
-      - brave-bin
+      - brave-origin-nightly-bin
       - firefox
     state: present
   become:true
