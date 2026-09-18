@@ -23,3 +23,6 @@ fi
 # Add your GitHub private key
 # Replace 'id_ed25519_github' with your actual filename
 ssh-add "$HOME/.ssh/github" 2>/dev/null
+
+# Context7 API Key
+export CONTEXT7_API_KEY="$(cat $HOME/.context7/.env)"

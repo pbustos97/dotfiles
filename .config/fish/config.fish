@@ -21,3 +21,6 @@ end
 
 # Add the GitHub key
 ssh-add $HOME/.ssh/github 2>/dev/null
+
+# Context7 API Key
+set -gx CONTEXT7_API_KEY (cat $HOME/.context7/.env)

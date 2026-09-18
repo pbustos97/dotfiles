@@ -17,12 +17,12 @@ Run the install script for all the tools:
 ./install_tools.sh
 ```
 
-Sync settings:
+Sync settings (home → repo):
 ```bash
 ./sync_configs.sh
 ```
 
-Restore settings:
+Restore settings (repo → home):
 ```bash
 ./restore_configs.sh
 ```
