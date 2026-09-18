@@ -22,3 +22,12 @@ ssh-add "$HOME/.ssh/github" 2>/dev/null
 
 # Context7 API Key
 export CONTEXT7_API_KEY="$(cat $HOME/.context7/.env)"
+
+# OpenCode API Key (from opencode auth.json)
+if [ -f "$HOME/.local/share/opencode/auth.json" ] && command -v jq >/dev/null 2>&1; then
+    _opencode_key="$(jq -r '.opencode.key // empty' "$HOME/.local/share/opencode/auth.json")"
+    _opencode_go_key="$(jq -r '.["opencode-go"].key // empty' "$HOME/.local/share/opencode/auth.json")"
+    [ -n "$_opencode_key" ] && export OPENCODE_API_KEY="$_opencode_key"
+    [ -n "$_opencode_go_key" ] && export OPENCODE_API_KEY="$_opencode_go_key"
+    unset _opencode_key _opencode_go_key
+fi
