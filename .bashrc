@@ -10,6 +10,10 @@ alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
 . "$HOME/.cargo/env"
 
+# opencode
+[ -d "$HOME/.opencode/bin" ] && [[ ":$PATH:" != *":$HOME/.opencode/bin:"* ]] && export PATH="$HOME/.opencode/bin:$PATH"
+[ -d "$HOME/.opencode-desktop/bin" ] && [[ ":$PATH:" != *":$HOME/.opencode-desktop/bin:"* ]] && export PATH="$HOME/.opencode-desktop/bin:$PATH"
+
 # Start ssh-agent if it is not already running
 if ! pgrep -u "$USER" ssh-agent > /dev/null; then
     ssh-agent -s > "$HOME/.ssh/agent-env"

@@ -7,7 +7,8 @@ source /usr/share/cachyos-fish-config/cachyos-config.fish
 #end
 
 # opencode
-fish_add_path /home/daniel/.opencode/bin
+fish_add_path $HOME/.opencode/bin
+fish_add_path $HOME/.opencode-desktop/bin
 
 # Start ssh-agent if not running
 if not pgrep -u $USER ssh-agent > /dev/null

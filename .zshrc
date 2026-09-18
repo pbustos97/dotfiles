@@ -7,6 +7,10 @@ fi
 
 source /usr/share/cachyos-zsh-config/cachyos-config.zsh
 
+# opencode
+[ -d "$HOME/.opencode/bin" ] && [[ ":$PATH:" != *":$HOME/.opencode/bin:"* ]] && export PATH="$HOME/.opencode/bin:$PATH"
+[ -d "$HOME/.opencode-desktop/bin" ] && [[ ":$PATH:" != *":$HOME/.opencode-desktop/bin:"* ]] && export PATH="$HOME/.opencode-desktop/bin:$PATH"
+
 # SSH Agent Setup
 AGENT_ENV="$HOME/.ssh/agent-env"
 
