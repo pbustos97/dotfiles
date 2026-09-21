@@ -36,3 +36,5 @@ if test -f $HOME/.local/share/opencode/auth.json; and command -v jq >/dev/null 2
     test -n "$_opencode_key"; and set -gx OPENCODE_API_KEY $_opencode_key
     test -n "$_opencode_go_key"; and set -gx OPENCODE_API_KEY $_opencode_go_key
 end
+
+fnm env --use-on-cd --shell fish | source
