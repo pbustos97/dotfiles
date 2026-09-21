@@ -42,3 +42,6 @@ if [ -f "$HOME/.local/share/opencode/auth.json" ] && command -v jq >/dev/null 2>
     [ -n "$_opencode_go_key" ] && export OPENCODE_API_KEY="$_opencode_go_key"
     unset _opencode_key _opencode_go_key
 fi
+
+# FNM Default Node Version
+eval "$(fnm env --use-on-cd --shell bash)"
