@@ -28,3 +28,12 @@ else
     # "nothing" - The sinks already exist, so we exit quietly to avoid duplicates
     echo "Browser sink is already configured."
 fi
+
+if ! pactl list sinks short | grep -q "SpotifySink"; then
+    pactl load-module module-null-sink sink_name=SpotifySink
+    pactl load-module module-loopback source=SpotifySink.monitor sink=alsa_output.usb-Yamaha_Corporation_Steinberg_UR12-00.analog-stereo
+
+else
+    # "nothing" - The sinks already exist, so we exit quietly to avoid duplicates
+    echo "Spotify sink is already configured."
+fi
