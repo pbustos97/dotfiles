@@ -10,7 +10,7 @@
   ansible.builtin.package:
     name:
       - discord-canary
-      - spotify-launcher
+      - spotifast
     state: present
   become: true
 
