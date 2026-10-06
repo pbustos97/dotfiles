@@ -16,8 +16,15 @@ if ! pactl list sinks short | grep -q "DiscordSink"; then
     # Set the default sink
     # This ensures your system audio defaults to the DesktopSink
     pactl set-default-sink DesktopSink
+else
+    echo "Discord and Desktop Sinks already configured."
+fi
+
+if ! pactl list sinks short | grep -q "BrowserSink"; then
+    pactl load-module module-null-sink sink_name=BrowserSink
+    pactl load-module module-loopback source=BrowserSink.monitor sink=alsa_output.usb-Yamaha_Corporation_Steinberg_UR12-00.analog-stereo
 
 else
     # "nothing" - The sinks already exist, so we exit quietly to avoid duplicates
-    echo "Sinks are already configured."
+    echo "Browser sink is already configured."
 fi

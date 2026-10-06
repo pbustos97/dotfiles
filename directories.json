@@ -59,6 +59,11 @@
         "name": "zshrc",
         "source": ".zshrc",
         "dotfiles": ".zshrc"
+    },
+    {
+        "name": "pipewire-pulse",
+        "source": ".config/pipewire/pipewire-pulse.conf.d",
+        "dotfiles": ".config/pipewire/pipewire-pulse.conf.d"
     }
   ]
 }
