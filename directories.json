@@ -64,6 +64,11 @@
         "name": "pipewire-pulse",
         "source": ".config/pipewire/pipewire-pulse.conf.d",
         "dotfiles": ".config/pipewire/pipewire-pulse.conf.d"
+    },
+    {
+        "name": "spotify flatpak",
+        "source": "/.var/app/com.spotify.Client/config/pipewire/client.conf.d",
+        "dotfiles": "/.var/app/com.spotify.Client/config/pipewire/client.conf.d"
     }
   ]
 }
