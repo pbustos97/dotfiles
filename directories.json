@@ -67,8 +67,8 @@
     },
     {
         "name": "spotify flatpak",
-        "source": "/.var/app/com.spotify.Client/config/pipewire/client.conf.d",
-        "dotfiles": "/.var/app/com.spotify.Client/config/pipewire/client.conf.d"
+        "source": ".var/app/com.spotify.Client/config/pipewire/client.conf.d",
+        "dotfiles": ".var/app/com.spotify.Client/config/pipewire/client.conf.d"
     }
   ]
 }
