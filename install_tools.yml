@@ -18,3 +18,7 @@
     - name: Essential Apps
       ansible.builtin.include_tasks:
         file: tasks/essentials.yml
+
+    - name: Flatpak apps
+      ansible.builtin.include_tasks:
+        file: tasks/flatpaks.yml

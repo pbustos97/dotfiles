@@ -1,0 +1,22 @@
+- name: Install flatpak
+  ansible.builtin.package:
+    name: flatpak
+    state: present
+  become: true
+
+- name: Add Flathub remote
+  community.general.flatpak_remote:
+    name: flathub
+    flatpakrepo_url: https://dl.flathub.org/repo/flathub.flatpakrepo
+    state: present
+    method: system
+  become: true
+
+- name: Install flatpak apps
+  community.general.flatpak:
+    name: "{{ item }}"
+    remote: flathub
+    state: present
+    method: system
+  become: true
+  loop: "{{ lookup('file', playbook_dir + '/install_scripts/flatpaks.txt').splitlines() | reject('match', '^\\s*(#|$)') | list }}"

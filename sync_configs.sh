@@ -27,3 +27,13 @@ while IFS= read -r entry; do
     dest_dotfiles="$(echo "$entry" | jq -r '.dotfiles')"
     copy_if_exists "$HOME/$source" "$DOTFILES_DIR/$dest_dotfiles"
 done < <(jq -c '.directories[]' "$CONFIG_FILE")
+
+# Flatpak apps (runtimes excluded)
+if command -v flatpak >/dev/null 2>&1; then
+    flatpak list --app --columns=application \
+        | grep -v '^Application ID$' \
+        > "$SCRIPT_DIR/install_scripts/flatpaks.txt" || true
+    echo "Wrote: install_scripts/flatpaks.txt"
+else
+    echo "Skipped (flatpak not installed)"
+fi
