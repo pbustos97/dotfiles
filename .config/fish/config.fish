@@ -1,10 +1,13 @@
-source /usr/share/cachyos-fish-config/cachyos-config.fish
+#source /usr/share/cachyos-fish-config/cachyos-config.fish
 
 # overwrite greeting
 # potentially disabling fastfetch
 #function fish_greeting
 #    # smth smth
 #end
+
+# Autosuggestions
+set -g fish_autosuggestion_enabled 1
 
 # opencode
 fish_add_path $HOME/.opencode/bin

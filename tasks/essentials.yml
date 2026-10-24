@@ -1,42 +1,40 @@
 - name: Install Browsers
   ansible.builtin.package:
     name:
-      - brave-origin-nightly-bin
+#      - brave-origin-nightly-bin
       - firefox
     state: present
-  become:true
-
-- name: Install Discord and Spotify
-  ansible.builtin.package:
-    name:
-      - discord-canary
-      - spotifast
-    state: present
   become: true
 
-- name: Install PDF signer/reader
-  ansible.builtin.package:
-    name:
-      - stirling-pdf-desktop
-    state: present
-  become: true
+#- name: Install Discord and Spotify
+#  ansible.builtin.package:
+#    name:
+#      - discord-canary
+#    state: present
+#  become: true
+
+#- name: Install PDF signer/reader
+#  ansible.builtin.package:
+#    name:
+#      - stirling-pdf-desktop
+#    state: present
+#  become: true
 
 - name: Install Screen Recorder and stream tools
   ansible.builtin.package:
     name:
-      - obs-studio-browser
-      - gpu-screen-recorder-ui
-      - ffmpeg
-      - mangohud-git
-      - lib32-mangohud-git
-      - kdotool-bin
+#      - gpu-screen-recorder-ui
+#      - ffmpeg
+      - mangohud
+#      - lib32-mangohud-git
+#      - kdotool-bin
     state: present
   become: true
 
 - name: Install Media Viewers
   ansible.builtin.package:
     name:
-      - qimgv-git
+      - qimgv
       - fooyin
     state: present
   become: true
@@ -45,5 +43,6 @@
   ansible.builtin.package:
     name:
       - wireguard-tools
+      - netbird
     state: present
   become: true

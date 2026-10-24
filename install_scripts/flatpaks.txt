@@ -1,5 +1,6 @@
+com.dec05eba.gpu_screen_recorder
 com.dropbox.Client
 com.obsproject.Studio
-com.obsproject.Studio.Plugin.DistroAV
+com.spotify.Client
 com.spotify.Client
 no.mifi.losslesscut

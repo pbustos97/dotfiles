@@ -9,7 +9,7 @@ linemode="git"
 
 [opener]
 edit = [
-    {run="vim %s", orphan=false, block=true,for="unix"}
+    {run="nvim %s", orphan=false, block=true,for="unix"}
 ]
 
 open_dir = [
@@ -28,6 +28,14 @@ open_audio = [
     {run="fooyin %s", orphan=true, block=false, for="unix"}
 ]
 
+open_pdf = [
+    {run="Stirling-PDF %s", orphan=true, block=false, for="unix"}
+]
+
+open_office = [
+    {run="soffice %s", orphan=true, block=false, for="unix"}
+]
+
 [open]
 rules = [
     {mime="folder/*", use="open_dir"},
@@ -35,6 +43,14 @@ rules = [
     {mime="video/*", use="open_vid"},
     {mime="image/*", use="open_img"},
     {mime="audio/*", use="open_audio"},
+    {mime="application/pdf", use="open_pdf"},
+
+    # Office documents
+    {url="*.xlsx", use="open_office"},
+    {url="*.ods", use="open_office"},
+    {url="*.odt", use="open_office"},
+    {url="*.doc", use="open_office"},
+    {url="*.docx", use="open_office"},
 ]
 
 [plugin]

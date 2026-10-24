@@ -4,6 +4,6 @@ Name=GPU Screen Recorder
 GenericName=Screen recorder
 Comment=A ShadowPlay-like screen recorder for Linux
 Icon=gpu-screen-recorder
-Exec=gsr-ui launch-daemon
+Exec=flatpak run com.dec05eba.gpu_screen_recorder gsr-ui
 Terminal=false
 Hidden=false

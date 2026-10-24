@@ -45,3 +45,5 @@ fi
 
 # FNM Default Node Version
 eval "$(fnm env --use-on-cd --shell bash)"
+
+export PATH="$HOME/.local/bin:$PATH"
