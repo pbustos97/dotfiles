@@ -3,4 +3,5 @@ com.dropbox.Client
 com.obsproject.Studio
 com.spotify.Client
 com.spotify.Client
+org.keepassxc.KeePassXC
 no.mifi.losslesscut

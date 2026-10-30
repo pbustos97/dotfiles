@@ -36,3 +36,10 @@
       - 7zip
     state: present
   become: true
+
+- name: Install clang
+  ansible.builtin.package:
+    name:
+      - clang
+    state: present
+  become: true
